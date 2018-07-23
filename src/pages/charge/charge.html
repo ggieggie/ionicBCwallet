@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ChargePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>チャージ</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="return()" color="primary">戻る︎</button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div>
+      ■クレジットカード情報
+    </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" stacked>カード番号:</ion-label>
+      <ion-input [(ngModel)]="this.number" placeholder="card number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>期限（月）:</ion-label>
+      <ion-input [(ngModel)]="this.expMonth" placeholder="expiry month"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>期限（年）:</ion-label>
+      <ion-input [(ngModel)]="this.expYear" placeholder="expiry year"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>セキュリティコード:</ion-label>
+      <ion-input [(ngModel)]="this.cvc" placeholder="cvc"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <div>
+      ■チャージ情報
+    </div>
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="this.amount" placeholder="ここに金額（円）を入力"></ion-input>
+    </ion-item>
+  </ion-list>
+  <p>＊手数料3.6%を差し引いた額をチャージします。</p>
+    <button ion-button (click)="charge()">チャージ</button>
+  </ion-content>

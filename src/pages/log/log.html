@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="custom-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      履歴
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="log-content" padding>
+  <button ion-button class="submit-btn" full icon-left (click) = "get()"><ion-icon name="md-information-circle"></ion-icon>get（最新10件）</button>
+  <ion-list>
+    <ion-item *ngFor="let item of logsary; let i = index; ">
+     <!-- アイコン検索 -->
+      <!-- チャージ -->
+      <ion-avatar item-left *ngIf="logsary[i][0] == 'charge'">
+        <img src="assets/img/charge.png">
+      </ion-avatar>
+      <p *ngIf="logsary[i][0] == 'charge'">{{ logsary[i][6] }}</p>
+      <p *ngIf="logsary[i][0] == 'charge'">現金からチャージ</p>
+      <p align="right" *ngIf="logsary[i][0] == 'charge'">{{ logsary[i][2] }}CFC</p>
+      <!-- カフェ購入 -->
+      <ion-avatar item-left *ngIf="logsary[i][0] == 'cafe'">
+        <img src="assets/img/cafe.png">
+      </ion-avatar>
+      <p *ngIf="logsary[i][0] == 'cafe'">{{ logsary[i][6] }}</p>
+      <p *ngIf="logsary[i][0] == 'cafe'">{{ logsary[i][3] }}を購入</p>
+      <p align="right" *ngIf="logsary[i][0] == 'cafe'">{{ logsary[i][2] }}CFC</p>
+      <!-- 入金 -->
+      <ion-avatar item-left *ngIf="logsary[i][0] == 'human' && logsary[i][1] == myAddress">
+        <img src="assets/img/receive.png">
+      </ion-avatar>
+      <p *ngIf="logsary[i][0] == 'human' && logsary[i][1] == myAddress">{{ logsary[i][6] }}</p>
+      <p *ngIf="logsary[i][0] == 'human' && logsary[i][1] == myAddress">入金指示</p>
+      <p align="right" *ngIf="logsary[i][0] == 'human' && logsary[i][1] == myAddress">{{ logsary[i][2]*-1 }}CFC</p>
+      <!-- 送金 -->
+      <ion-avatar item-left *ngIf="logsary[i][0] == 'human' && logsary[i][1] != myAddress">
+        <img src="assets/img/send.png">
+      </ion-avatar>
+      <p *ngIf="logsary[i][0] == 'human' && logsary[i][1] != myAddress">{{ logsary[i][6] }}</p>
+      <p *ngIf="logsary[i][0] == 'human' && logsary[i][1] != myAddress">送金指示</p>
+      <p align="right" *ngIf="logsary[i][0] == 'human' && logsary[i][1] != myAddress">{{ logsary[i][2] }}CFC</p>
+  </ion-item>
+  </ion-list>
+</ion-content>

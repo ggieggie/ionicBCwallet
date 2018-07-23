@@ -1,0 +1,114 @@
+page-transaction {
+   .transaction-content {
+        background: #FFF2C1;
+
+        .logo-row {
+          padding-top: 50px;
+          padding-bottom: 20px;
+        }
+
+        .login-box {
+          background: #FBAA31;
+          padding: 20px 20px 0px 20px;
+          margin-top: 30px;
+        }
+
+        ion-row {
+           align-items: center;
+           text-align: center;
+         }
+
+         ion-item {
+             border-radius: 30px !important;
+             padding-left: 30px !important;
+             font-size: 0.9em;
+             margin-bottom: 10px;
+             border: 1px solid #ffffff;
+             border-bottom: 0px !important;
+             box-shadow: none !important;
+         }
+
+         .signup-col {
+           margin: 0px 16px 0px 16px;
+           padding-bottom: 20px;
+         }
+
+         .item-inner {
+           border-bottom-color: #ffffff !important;
+           box-shadow: none !important;
+         }
+
+         .submit-btn {
+           background: #F36304;
+           border-radius: 30px !important;
+           border: 1px solid #ffffff;
+         }
+
+         .register-btn {
+           color: #ffffff;
+           font-size: 0.8em;
+         }
+      }
+
+
+  .scroll-content{
+    background-color: #FFF2C1;
+  }
+
+  .chat-item{
+    background-color: transparent !important;
+  }
+
+  .chat-item ion-avatar[item-left]{
+    margin-right: 0px !important;
+  }
+
+  .chat-item ion-avatar[item-right]{
+      margin-left: 0px !important;
+    }
+
+  .bubble{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .bubble::before{
+      background-color: #F2F2F2;
+      content: "\00a0";
+      display: block;
+      height: 16px;
+      position: absolute;
+      top: 11px;
+      transform:            rotate( 29deg ) skew( -35deg );
+        -moz-transform:     rotate( 29deg ) skew( -35deg );
+        -ms-transform:      rotate( 29deg ) skew( -35deg );
+        -o-transform:       rotate( 29deg ) skew( -35deg );
+        -webkit-transform:  rotate( 29deg ) skew( -35deg );
+      width: 20px;
+    }
+
+  .me{
+      float: left;
+      margin: 5px 45px 5px 20px;
+  }
+
+  .me::before{
+      box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+      left: -9px;
+  }
+
+  .you{
+      float: right;
+      margin: 5px 20px 5px 45px;
+  }
+
+  .you::before{
+      box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+      right: -9px;
+  }
+}
